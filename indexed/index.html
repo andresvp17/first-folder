@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+       body{ font-family: sans-serif; } 
+    </style>
+    <h1>IndexedDB</h1>
+    <form id="form" class="form">
+        <label for="task">Task</label>
+        <input type="text" name="task">
+        <select name="priority">
+          <option value="low">Low</option>
+          <option value="normal">Normal</option>
+          <option value="high">High</option>
+        </select>
+        <button class="button" name="button" data-action="add">Add</button>
+      </form>
+    <div class="task" id="task"></div>
+    <script src="/app.js"></script>
+</body>
+</html>

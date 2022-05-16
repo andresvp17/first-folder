@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="/assets/pexels-krivec-ales-580151.jpg" alt="" class="image-element">
+        <img src="/assets/pexels-ben-mack-5708069.jpg" class="image-element disappear" alt="">
+        <img class="icon" id="icon" data-icon="moon" src="/assets/bx-moon.svg" alt="">
+    </div>
+
+    <form id="form" class="wrapper">
+
+        <div class="input-container">
+            <input class="input" autocomplete="off" id="input" type="text" placeholder="Insert A Thing To Do...">
+            <button class="btn">Submit</button>
+        </div>
+
+        <div class="task-container">
+            <div class="text-container">
+                <p id="items-left">0 Items Left</p>
+                <p id="clear-task">Clear Completed Tasks</p>
+            </div>
+
+            <div class="task__content" id="task-content"></div>
+
+            <div id="types-task" class="text-container">
+                <p>All</p>
+                <p>Active</p>
+                <p>Completed</p>
+            </div>
+        </div>
+
+    </form>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

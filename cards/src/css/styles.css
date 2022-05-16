@@ -1,0 +1,276 @@
+:root{
+    --bg-color: #514945;
+    --primary-color: #d55c5a;
+    --this-red: #d55c5a;
+    --cordovan: #894242;
+    --tulip: #f5918f;
+    --almond: #ebd4cc;
+}
+
+*,*::after,*::before{ box-sizing: border-box; }
+
+body{
+    background-color: var(--bg-color);
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.text__window{
+    width: 100%;
+    height: 190px;
+    background-color: var(--almond);
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 2px 10px #111;
+}
+
+.text__window--disappear{
+    transition: transform .5s;
+    transform: translateY(-110%);
+}
+
+.text__window-content{
+    font-size: 1.5rem;
+}
+
+.modal__window{
+    width: 30%;
+    height: 30%;
+    min-height: 230px;
+    min-width: 250px;
+    max-width: 400px;
+    max-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 10px #111;
+    background-color: var(--primary-color);    
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    z-index: 10;
+}
+
+
+.input{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--almond);
+    outline: none;
+    caret-color: var(--almond);
+    font-size: 1em;
+}
+
+.btn{
+    border: none;
+    margin-top: 10px;
+    padding: .30rem 2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-tulip{
+    background-color: var(--almond);
+}
+
+.btn-green{
+    background-color: rgb(50, 196, 36);
+    color: aliceblue;
+}
+.btn-red{
+    background-color: rgb(196, 6, 6);
+    color: aliceblue;
+}
+
+.teams{
+    width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    box-shadow: 2px 2px 10px #111;
+}
+
+.team-text,
+.card-text{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--almond);
+}
+
+.card-text{
+    font-size: 2rem;
+}
+
+.game__container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 10px;
+}
+
+.card{
+    width: 150px;
+    height: 170px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 2px 2px 10px #111;
+}
+
+.card__front,
+.card__back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.card__back{
+    background-color: var(--primary-color);
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.card__front{
+    background-color: var(--almond);
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card__flip{
+    transform: rotateY(180deg);
+    transition: transform .5s;
+}
+
+.disappear{
+    transform: translateY(-250%);
+    transition: transform .5s;
+}
+
+.show{
+    transform: translateY(0);
+    transition: transform .5s;
+}
+
+.choose-color{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid aliceblue;
+    box-shadow: 2px 2px 5px #111;
+    position: absolute;
+    top: 80px;
+    Left: 5px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+.choose-color::after,
+.choose-color::before{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 10px;
+    background-color: aliceblue;
+}
+
+.choose-color::after{
+    transform: rotate(50deg);
+    left: 3px;
+}
+
+.choose-color::before{
+    transform: rotate(-50deg);
+    right: 3px;
+}
+
+.choose-color--item{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid aliceblue;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+.genoa{
+    background-color: #117c6f;
+}
+
+.bahama-blue{
+    background-color: #015c92;
+}
+
+.rose-cherry{
+    background-color: #7e1037;
+}
+
+.bossanova{
+    background-color: #522157;
+}
+
+.animation-color-1{
+    animation: transform-1 .5s forwards;
+}
+.animation-color-2{
+    animation: transform-2 .6s forwards;
+}
+.animation-color-3{
+    animation: transform-3 .7s forwards;
+}
+.animation-color-4{
+    animation: transform-4 .8s forwards;
+}
+
+@keyframes transform-1 {
+    100%{
+         transform: translateY(120%);
+         margin-top: 5px;
+    }
+}
+@keyframes transform-2 {
+    100%{
+         transform: translateY(220%);
+         margin-top: 10px;
+    }
+}
+@keyframes transform-3 {
+    100%{
+         transform: translateY(320%);
+         margin-top: 15px;
+    }
+}
+@keyframes transform-4 {
+    100%{
+         transform: translateY(420%);
+         margin-top: 20px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="right-wrong">
+        <p class="amount__question--text correct padding" id="correct-text">Correct: 0</p>
+        <p class="amount__question--text incorrect padding" id="incorrect-text">Incorrect: 0</p>
+    </div>
+    <div class="app" id="app">
+        <div class="question__main">
+            <h1 id="title-question">What is 2 + 2</h1>
+            <div class="timeline"></div>
+        </div>
+        <div class="question__options" id="options">
+            <div class="option" data-number="1">
+               <p class="option__text"> A. Choose 1</p>
+            </div>
+            <div class="option" data-number="2">
+                <p class="option__text"> B. Choose 2</p>
+             </div>
+             <div class="option" data-number="3">
+                <p class="option__text"> C. Choose 3</p>
+             </div>
+             <div class="option" data-number="4">
+                <p class="option__text"> D. Choose 4</p>
+             </div>
+        </div>
+        <div class="amount__question">
+            <p class="amount__question--text" id="amount-questions">1 of 5 Total Questions</p>
+            <div class="bar-progress">
+                <div class="bar-progress--element" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>

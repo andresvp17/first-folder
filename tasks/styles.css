@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    background-color: #33539e;
+    font-family: sans-serif;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+input{
+    caret-color: red;
+}
+
+.wrapper{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-bottom: 50px;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.form__item{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    grid-column: 2/3;
+    place-self: center;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+    color: aliceblue;
+    padding: 0.25rem 2rem;
+    cursor: pointer;
+    transition:  box-shadow .5s;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 20px #000;
+}
+
+.tasks{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto; 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.btn--task{
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+    color: aliceblue;
+    padding: 0.25rem 2rem;
+    cursor: pointer;
+    transition:  box-shadow .5s;
+    place-self: center;
+}
+
+.btn--task:hover{
+    box-shadow: 0px 0px 20px #000;
+}
+
+.tasks p{
+    font-weight: 700;
+    letter-spacing: 3px;
+}

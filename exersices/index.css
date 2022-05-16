@@ -1,0 +1,22 @@
+*{ box-sizing: border-box; }
+
+.box{
+    width: 250px;
+    height: 250px;
+    border: 10px solid skyblue;
+    background-color: darkblue;    
+}
+.text{
+    position: absolute;
+    font-size: 25px;
+    font-weight: 700;
+    color: crimson;
+}
+
+.circle{
+    display: inline-block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: crimson;
+}

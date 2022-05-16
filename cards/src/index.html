@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+    <div class="text__window text__window--disappear" id="text-window">
+        <p class="text__window-content"></p>
+        <div class="buttons">
+            <button id="wrong" class="btn btn-red">...Oops!</button>
+            <button id="correct" class="btn btn-green">Great!</button>
+        </div>
+    </div>
+    <div class="modal__window" id="modal-window">
+        <p class="team-text">Choose First Team's name: </p>
+        <input id="input" class="input" type="text" autocomplete="off">
+        <button class="btn btn-tulip" name="button" type="submit">Choose</button>
+    </div>
+    <div id="teams" class="teams">
+        <div class="teams__item" id="team-1">
+            <p class="team-text">Team 1</p>
+            <p class="team-text">0</p>
+        </div>
+        <div class="teams__item" id="team-2">
+            <p class="team-text">Team 2</p>
+            <p class="team-text">0</p>
+        </div>
+    </div>
+    <div class="game__container" id="game-container"></div>
+    <div id="color-main" class="choose-color" data-reaction="no-displayed">
+        <div class="choose-color--item genoa" data-color="#117c6f"></div>
+        <div class="choose-color--item bahama-blue" data-color="#015c92"></div>
+        <div class="choose-color--item rose-cherry" data-color="#7e1037"></div>
+        <div class="choose-color--item bossanova" data-color="#522157"></div>
+    </div>
+    <script src="/src/js/index.js"></script>
+</body>
+</html>
